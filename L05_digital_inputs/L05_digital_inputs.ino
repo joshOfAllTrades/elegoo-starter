@@ -1,27 +1,24 @@
-//www.elegoo.com
-//2016.12.08
+// Josh
+// 11/28/2020
 
-int ledPin = 5;
-int buttonApin = 9;
-int buttonBpin = 8;
+int ledPin = 8;
+int buttonApin = 2;
+int buttonBpin = 3;
 
 byte leds = 0;
 
-void setup() 
-{
+void setup() {
   pinMode(ledPin, OUTPUT);
   pinMode(buttonApin, INPUT_PULLUP);  
   pinMode(buttonBpin, INPUT_PULLUP);  
 }
 
-void loop() 
-{
-  if (digitalRead(buttonApin) == LOW)
-  {
+void loop() {
+  if (digitalRead(buttonApin) == LOW) {
     digitalWrite(ledPin, HIGH);
   }
-  if (digitalRead(buttonBpin) == LOW)
-  {
+  
+  if (digitalRead(buttonBpin) == LOW) {
     digitalWrite(ledPin, LOW);
   }
 }
